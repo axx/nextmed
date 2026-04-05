@@ -1,0 +1,30 @@
+.feature-view {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.feature-view h1 {
+    color: darkcyan;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.feature-view-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feature-view-form label {
+    font-weight: bold;
+}
+
+.feature-view-form input, .feature-view-form button, .feature-view-form select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: larger;
+}

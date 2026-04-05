@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextMed</title>
-    <link rel="stylesheet" href="style/index.css">
-    <script src="script/index.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextMed</title>
+  <link rel="stylesheet" href="libs/fontawesome-free-7.2.0-web/css/all.min.css">
+  <link rel="stylesheet" href="style/index.css">
+  <link rel="stylesheet" href="style/feature-view.css">
+  <script src="script/index.js" defer></script>
 </head>
+
 <body>
   <nav>
     <div class="nav-bar">
@@ -22,7 +26,91 @@
       <li><a href="#">History</a></li>
     </ul>
   </nav>
-  <main></main>
+  <main>
+
+    <div id="med-manager" class="feature-view">
+      <h1>Medication Management</h1>
+      <div id="med-manager-form" class="feature-view-form">
+        <label for="med-name">Medication Name:</label>
+        <input type="text" id="med-name" name="med-name" placeholder="Enter medication name">
+
+        <label for="dosage">Dosage:</label>
+        <input type="text" id="dosage" name="dosage" placeholder="Enter dosage information, e.g., 500mg">
+
+        <label for="frequency">Frequency:</label>
+        <select id="frequency" name="frequency" placeholder="Enter frequency (e.g., daily, weekly)">
+          <option value="Every hour">Every hour</option>
+          <option value="Every 2 hours">Every 2 hours</option>
+          <option value="Every 3 hours">Every 3 hours (8 times/day)</option>
+          <option value="Every 4 hours">Every 4 hours (6 times/day)</option>
+          <option value="Every 6 hours">Every 6 hours (4 times/day)</option>
+          <option value="Every 8 hours">Every 8 hours (3 times/day)</option>
+          <option value="Every 12 hours">Twice a day</option>
+          <option value="Daily">Daily</option>
+          <option value="Weekly">Weekly</option>
+          <option value="Monthly">Monthly</option>
+          <option value="As needed">As needed</option>
+        </select>
+
+        <label for="times">Times & Meals of the Day:</label>
+        <div id="times">
+          <div class="times-option">
+            <input type="checkbox" name="times-morning" id="times-morning" value="Morning">
+            <label for="times-morning">Morning</label>
+          </div>
+          <div class="times-option">
+            <input type="checkbox" name="times-afternoon" id="times-afternoon" value="Afternoon">
+            <label for="times-afternoon">Afternoon</label>
+          </div>
+          <div class="times-option">
+            <input type="checkbox" name="times-evening" id="times-evening" value="Evening">
+            <label for="times-evening">Evening</label>
+          </div>
+          <div class="times-option">
+            <input type="checkbox" name="times-night" id="times-night" value="Night">
+            <label for="times-night">Night</label>
+          </div>
+          <div class="times-option">
+            <input type="checkbox" name="times-during-meals" id="times-during-meals" value="During meals">
+            <label for="times-during-meals">During meals</label>
+          </div>
+          <div class="times-option">
+            <input type="checkbox" name="times-before-meals" id="times-before-meals" value="Before meals">
+            <label for="times-before-meals">Before meals</label>
+          </div>
+          <div class="times-option">
+            <input type="checkbox" name="times-after-meals" id="times-after-meals" value="After meals">
+            <label for="times-after-meals">After meals</label>
+          </div>
+        </div>
+
+        <div class="date-option">
+          <label for="start-date">Start Date:</label>
+          <input type="date" id="start-date" name="start-date">
+        </div>
+
+        <div class="date-option">
+          <label for="end-date">End Date:</label>
+          <input type="date" id="end-date" name="end-date">
+        </div>
+
+        <button id="schedule-med-btn"><i class="fa-solid fa-calendar-plus"></i> Schedule This Medication</button>
+        <button id="stop-med-btn"><i class="fa-solid fa-ban"></i> Stop This Medication</button>
+      </div>
+    </div>
+
+
+    <div id="med-recorder" class="feature-view">
+      <h1>Medication Recording</h1>
+    </div>
+
+
+    <div id="med-history" class="feature-view">
+      <h1>Medication History</h1>
+    </div>
+
+  </main>
   <footer>Copyright © 2026 NextMed. All rights reserved.</footer>
 </body>
+
 </html>
